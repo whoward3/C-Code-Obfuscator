@@ -9,5 +9,3 @@ def main():
     """
     The main function to begin the obfuscation of c code files
     """
-
- 
