@@ -5,9 +5,30 @@ Authors: Sam "Alice" Blair, Winston Howard, Chance Sweetser
 Created Date: 05/04/20
 """
 
+import os, re, math, random
+
 def main():
     """
     The main function to begin the obfuscation of c code files
     """
+    cwd = os.getcwd()
+    directory = cwd[-28:]
+    if(r"C-Code-Obfuscator\obfuscator" in directory or r"C-Code-Obfuscator/obfuscator" in directory):
+     cwd = cwd[:-10]
+     cwd = cwd + "tests"
+    else:
+     cwd = input('Path to C Source Files Directory: ')
+    
+    print("Looking for C Source Files in {}...".format(cwd))
 
- 
+    print("Log: ")
+    for filename in os.listdir(cwd):
+     print("\n {} : \r".format(filename))
+     if((".cpp" or ".c" or ".hpp" or ".h") in filename):
+      print("PASS\n")
+
+     else:
+      print("FAILED")
+
+if __name__ == "__main__":
+   main()
