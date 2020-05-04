@@ -22,6 +22,7 @@ def variable_renamer(a):
             pass
             #"ADD TO VAR_MAP"
 
+
 def main():
     """
     The main function to begin the obfuscation of c code files
