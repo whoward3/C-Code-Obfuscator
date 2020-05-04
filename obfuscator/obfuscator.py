@@ -7,19 +7,19 @@ Created Date: 05/04/20
 
 import os, re, math, random
 
-"""
-Function to rename all variables and fuctions
-"""
-def VarRenamer(a):
-    VarMap ={}
-    stuff = re.findall("REGEX", a
-        #"PUT REGEX HERE"
-        )
+def variable_renamer(a):
+    """
+    Function to rename all variables and fuctions
+    """
+    var_map ={}
+    stuff = re.findall("REGEX", a)
     for x in stuff:
-        if(x in VarMap):
+        if(x in var_map):
+            pass
             #"CHANGE IT"
             # USe this i think re.sub()
         else:
+            pass
             #"ADD TO VAR_MAP"
 
 def main():
