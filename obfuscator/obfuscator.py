@@ -7,6 +7,21 @@ Created Date: 05/04/20
 
 import os, re, math, random
 
+"""
+Function to rename all variables and fuctions
+"""
+def VarRenamer(a):
+    VarMap ={}
+    stuff = re.findall("REGEX", a
+        #"PUT REGEX HERE"
+        )
+    for x in stuff:
+        if(x in VarMap):
+            #"CHANGE IT"
+            # USe this i think re.sub()
+        else:
+            #"ADD TO VAR_MAP"
+
 def main():
     """
     The main function to begin the obfuscation of c code files
