@@ -5,23 +5,33 @@ Authors: Sam "Alice" Blair, Winston Howard, Chance Sweetser
 Created Date: 05/04/20
 """
 
-import os, re, math, random
+import os, re, math, random, string
 
 def variable_renamer(a):
     """
     Function to rename all variables and fuctions
     """
+    ###THIS HAS NOT BEEN TESTED YET
     var_map ={}
-    stuff = re.findall("REGEX", a)
-    for x in stuff:
+    code = re.findall(
+        '(?:\w+\s+)([a-zA-Z_][a-zA-Z0-9_]*)', a) 
+        #this finds variable declarations and func decs
+    for x in code:
         if(x in var_map):
             pass
-            #"CHANGE IT"
-            # USe this i think re.sub()
+        #Ignore it becaude it is already in the map
         else:
-            pass
-            #"ADD TO VAR_MAP"
+            #generate a random string and assign that to the function/var name
+            new_string = randomString(12)
+            var_map[x] = new_string
+    for z in var_map:
+        #for each instance in the map replace it in the string with the randomly generated string
+        a = a.replace(z, var_map[z])
+            
 
+def randomString(stringLength=8):
+    letters = string.ascii_lowercase
+    return ''.join(random.choice(letters) for i in range(stringLength))
 
 def main():
     """
