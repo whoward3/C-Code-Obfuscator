@@ -5,7 +5,11 @@ Authors: Sam "Alice" Blair, Winston Howard, Chance Sweetser
 Created Date: 05/04/20
 """
 
-import os, re, math, random, string
+import os
+import re
+import math
+import random
+import string
 
 
 def variable_renamer(a):
@@ -40,10 +44,11 @@ def main():
     The main function to begin the obfuscation of c code files
     """
     cwd = os.getcwd()
-    directory = cwd[-28:]
-    if(r"C-Code-Obfuscator\obfuscator" in directory or r"C-Code-Obfuscator/obfuscator" in directory):
-        cwd = cwd[:-10]
-        cwd = cwd + "tests"
+    # Attempt to find the repository directory name, if it exists change cwd to where the tests folder should be in the cwd
+    if(r"C-Code-Obfuscator" in cwd):
+        offset = cwd.find("C-Code-Obfuscator") + 17
+        cwd = cwd[:offset]
+        cwd = cwd + cwd[-18] + "tests"
     else:
         cwd = input('Path to C Source Files Directory: ')
 
@@ -53,15 +58,17 @@ def main():
     for filename in os.listdir(cwd):
         print("\n {} : \r".format(filename))
         if((".cpp" or ".c" or ".hpp" or ".h") in filename):
-         with open(os.path.join(cwd, filename)) as file_data:
-          file_string = file_data.read()
-          print("PASS\n")
-          file_string = variable_renamer(file_string)
-          
-          print(file_string)
+            with open(os.path.join(cwd, filename)) as file_data:
+                file_string = file_data.read()
+                print("PASS\n")
+                file_string = variable_renamer(file_string)
+                f = open("obfuscated_"+filename, "w+")
+                f.write(file_string)
+                print(file_string)
 
         else:
-            print("FAILED")
+            print("FAIL")
+
 
 if __name__ == "__main__":
     main()
