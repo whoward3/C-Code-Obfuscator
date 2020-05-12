@@ -12,26 +12,57 @@ import random
 import string
 
 
+
+
 def variable_renamer(a):
     """
     Function to rename all variables and fuctions when given a string a
     """
     var_map = {}
+    splits = re.split('\"',a)
     code = re.findall(
-        r'(?:\w+\s+)([a-zA-Z_][a-zA-Z0-9_]*)', a)
+        "(?:\w+\s+)(?!main)(?:\*)*([a-zA-Z_][a-zA-Z0-9_]*)", a)
     # this finds variable declarations and func decs
     for x in code:
-        if(x in var_map):
-            pass
-        # Ignore it becaude it is already in the map
-        else:
+        if(x not in var_map):
+            var_map[x] = random_string(12)
             # generate a random string and assign that to the function/var name
-            new_string = random_string(12)
-            var_map[x] = new_string
-    for z in var_map:
-        # for each instance in the map replace it in the string with the randomly generated string
-        a = a.replace(z, var_map[z])
+
+    index = 0
+    a = ""
+    for s in splits:
+            if(index%2==0):  
+                for z in var_map:
+                    # for each instance in the map replace it in the string with the randomly generated string
+                    s = s.replace(z, var_map[z])
+            if(index != 0):
+                a = a + "\"" + s
+            else:
+                a = a + s
+            index+=1
     return a
+
+
+# inString = False
+
+# if start string True
+
+
+# [name][name][bool]
+
+
+
+
+# int main()
+# {
+#     string alo = "harry bilvbo";
+#     int potter = 5;
+# }
+
+# in the map
+# alo
+# potter
+# bilbo
 
 
 def random_string(stringLength=8):
