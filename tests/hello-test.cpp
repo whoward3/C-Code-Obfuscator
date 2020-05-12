@@ -2,13 +2,12 @@
 
 #include <string>
 #include <iostream>
-using namespace std;
 
-string hello_function(int a)
+std::string hello_function(int a)
 {
     while (a > 0)
     {
-        cout << a;
+        std::cout << a;
         a = a - 1;
     }
 
@@ -26,7 +25,8 @@ string hello_function(int a)
 int main()
 {
     int number = 5;
-    string res = hello_function(number);
-    cout << res;
+    std::string res = hello_function(number);
+    std::cout << res;
     return 0; /*End of the function*/
 }
+
