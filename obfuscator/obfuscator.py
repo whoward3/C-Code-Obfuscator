@@ -165,7 +165,7 @@ def main():
     print("Log: ")
     for filename in os.listdir(cwd):
         print("\n {} : \r".format(filename))
-        if((".cpp" or ".c" or ".hpp" or ".h") in filename):
+        if(".c" in filename or ".h" in filename):
             with open(os.path.join(cwd, filename)) as file_data:
                 file_string = file_data.read()
                 print("PASS\n")
