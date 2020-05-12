@@ -38,49 +38,19 @@ def variable_renamer(a):
                 for z in var_map:
                     # for each instance in the map replace it in the string with the randomly generated string                    
                     re_string = r"\W{}\W".format(z)
-                    tuples =  [(m.start(0), m.end(0)) for m in re.finditer(re_string, s)]
-                    for touple in tuples:
-                        strt = touple[0]
-                        end = touple[1]
-                        s = s[:strt+1] + var_map[z] + s[end-1:]
-            if(index < 1):
+                    while True:
+                     m = re.search(re_string,s)
+                     if(not m):
+                         break
+                     start = m.start(0)
+                     end = m.end(0)
+                     s = s[:start+1] + var_map[z] + s[end-1:]
+            if(index >= 1):
                 a = a + "\"" + s  
             else:
                 a = a + s
             index+=1
     return a
-
-
-# inString = False
-
-#fullmatch
-# int _cha_= 5
-#replace(z,varmap)
-# _cha_
-
-# _dsfhjksdfsj_ 
-
-
-
-
-# if start string True
-# ;a[ -> fjdskalfdjsakl
-
-# [name][name][bool]
-
-
-
-
-# int main()
-# {
-#     string alo = "harry bilvbo";
-#     int potter = 5;
-# }
-
-# in the map
-# alo
-# potter
-# bilbo
 
 
 def random_string(stringLength=8):
