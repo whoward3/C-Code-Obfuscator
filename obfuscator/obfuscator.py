@@ -96,7 +96,7 @@ def whitespace_remover(a):
     Function to remove all whitespace, except for after functions, variables, and imports
     """
     splits = re.split('\"',a)
-    code_string = "((\w+\s+)[a-zA-Z_*][|a-zA-Z0-9_]*|#.*|return [a-zA-Z0-9_]*)"
+    code_string = "((\w+\s+)[a-zA-Z_*][|a-zA-Z0-9_]*|#.*|return [a-zA-Z0-9_]*| [[.].]|else)"
     index = 0
     a = ""
     for s in splits:
@@ -111,8 +111,8 @@ def whitespace_remover(a):
 
                if(code[0][0] == '#'):
                  new = code[0] + "\n"                      # Adding a newline for preprocesser commands
-               elif("unsigned" in code[0]):
-                 new = code[0] + " "     
+               elif("unsigned" in code[0] or "else" in code[0]):
+                 new = code[0] + " "
                s_spaceless = s_spaceless.replace(old,new) # Replace the spaceless code blocks in s with their spaced equivilents                
             else:
               s_spaceless = s
