@@ -11,7 +11,7 @@ You have been asked to write a C or C++ code obfuscator - you may use any langua
 	- [x] Part two of the develop phase [50]:<br>
 			Develop a mechanism that would obfuscate more complex data structures and possibly even logic structures. E.g. arrays, switch statements, etc.
 
-- [ ] Attack Phase [50]:<br>
+- [x] Attack Phase [50]:<br>
 		Using any and all of the tools you have seen in this class, dissect code that you have obfuscated using your software. Identify everything you can.
 
 - [ ] WriteUp/Submission [50]:<br>
@@ -20,20 +20,30 @@ You must use version control, include me,and:<br>
 	- [x] 5 pts  describe program:requirements, installation, usage - [see here](https://github.com/whoward3/C-Code-Obfuscator/blob/master/README.md)
 	- [x] 10 pts  documentation of design choices - [see here](https://github.com/whoward3/C-Code-Obfuscator/blob/master/DESIGN.md)
 	- [ ] 10 pts  documentation of your dissection and analysis - [see here](https://github.com/whoward3/C-Code-Obfuscator/blob/master/ANALYSIS.md)
-	- [ ] 25 pts  reflection of the strengths, weaknesses, and future changes - [see here](https://github.com/whoward3/C-Code-Obfuscator/blob/master/NOP.md)
+	- [x] 25 pts  reflection of the strengths, weaknesses, and future changes - [see here](https://github.com/whoward3/C-Code-Obfuscator/blob/master/NOP.md)
 ***
 ## Installation and Usage
 This python code is run in VS code, so if need be make sure python 3.7 is installed. In when you run it, give it the C/C++ file you like to obfuscate and it will genereate a obfuscated version of the original file. This was done so the user wishing to obfuscate can retain their orignal code and have an obfuscated version. The user can then rename the cpp file to whatever they wish. 
 ***
 ## Sample Usages:
-### Before and After of an obfuscated C/C++ file with the comments removed.
-### Before and After of an obfuscated C/C++ file with functions and variables renamed to a random string.
+### Before anything happens
 
 <img src = "https://raw.githubusercontent.com/whoward3/C-Code-Obfuscator/master/assets/Example1Photo1.png" width = "400"> <br>
 
+### After of an obfuscated C/C++ file with the comments removed.
+
+<img src = "https://github.com/whoward3/C-Code-Obfuscator/blob/master/assets/comment_remover_after.png?raw=true" width = "400"> <br>
+
+### After of an obfuscated C/C++ file with functions and variables renamed to a random string.
+
 <img src = "https://raw.githubusercontent.com/whoward3/C-Code-Obfuscator/master/assets/Example1Photo2.png" width = "700"><br>
 
-### Before and After of an obfuscated C/C++ file with whitespaces removed, excluding after functions, variables, and imports.
+### After of an obfuscated C/C++ file with whitespaces removed, excluding after functions, variables, and imports.
 
-### Before and After of an obfuscated C/C++ file with all 3 types of obfuscation used.
+<img src = "https://github.com/whoward3/C-Code-Obfuscator/blob/master/assets/whitespace_remover_after.png?raw=true" width = "700"><br>
+
+### After of an obfuscated C/C++ file with all 3 types of obfuscation used.
+
+<img src = "https://github.com/whoward3/C-Code-Obfuscator/blob/master/assets/all_3_after_picture.png?raw=true" width = "700"><br>
+
 
