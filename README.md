@@ -26,14 +26,24 @@ You must use version control, include me,and:<br>
 This python code is run in VS code, so if need be make sure python 3.7 is installed. In when you run it, give it the C/C++ file you like to obfuscate and it will genereate a obfuscated version of the original file. This was done so the user wishing to obfuscate can retain their orignal code and have an obfuscated version. The user can then rename the cpp file to whatever they wish. 
 ***
 ## Sample Usages:
-### Before and After of an obfuscated C/C++ file with the comments removed.
-### Before and After of an obfuscated C/C++ file with functions and variables renamed to a random string.
+### Before anything happens
 
 <img src = "https://raw.githubusercontent.com/whoward3/C-Code-Obfuscator/master/assets/Example1Photo1.png" width = "400"> <br>
 
+### After of an obfuscated C/C++ file with the comments removed.
+
+<img src = "https://github.com/whoward3/C-Code-Obfuscator/blob/master/assets/comment_remover_after.png?raw=true" width = "400"> <br>
+
+### After of an obfuscated C/C++ file with functions and variables renamed to a random string.
+
 <img src = "https://raw.githubusercontent.com/whoward3/C-Code-Obfuscator/master/assets/Example1Photo2.png" width = "700"><br>
 
-### Before and After of an obfuscated C/C++ file with whitespaces removed, excluding after functions, variables, and imports.
+### After of an obfuscated C/C++ file with whitespaces removed, excluding after functions, variables, and imports.
 
-### Before and After of an obfuscated C/C++ file with all 3 types of obfuscation used.
+<img src = "https://github.com/whoward3/C-Code-Obfuscator/blob/master/assets/whitespace_remover_after.png?raw=true" width = "700"><br>
+
+### After of an obfuscated C/C++ file with all 3 types of obfuscation used.
+
+<img src = "https://github.com/whoward3/C-Code-Obfuscator/blob/master/assets/all_3_after_picture.png?raw=true" width = "700"><br>
+
 
