@@ -14,7 +14,7 @@ int main(int a, char **A)
   typedef unsigned long C;
   C b[8];
   if (!(a == 7 && (B = fopen(1 [A], "rb"))))
-    return 1;/*Test C comment*/
+    return 1; /*Test C comment*/
   for (7 [b] = 0; 7 [b] < 5; 7 [b]++)
     b[7 [b]] = strtoul(A[2 + 7 [b]], 0, 16 - !7 [b] * 6);
   5 [b] = 3 [b];
@@ -27,7 +27,7 @@ int main(int a, char **A)
     5 [b] ^= 6 [b] << (0 [b] - 8);
     for (7 [b] = 0; 7 [b] < 8; 7 [b]++)
       if ((5 [b] >> (0 [b] - 1)) & 1)
-        5 [b] = (5 [b] << 1) ^ 1 [b];//Test CPP Comment
+        5 [b] = (5 [b] << 1) ^ 1 [b]; //Test CPP Comment
       else
         5 [b] <<= 1;
   }

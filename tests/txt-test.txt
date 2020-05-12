@@ -1,0 +1,1 @@
+This a text test file that should not be obfuscated by our c/c++ source code obfuscator.
