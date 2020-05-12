@@ -23,7 +23,7 @@ def variable_renamer(a):
     special_cases = {"typedef","unsigned"}
     splits = re.split('\"',a)
     code = re.findall(
-        "(?:\w+\s+)(?!main)([a-zA-Z_][a-zA-Z0-9_]*)", a)
+        "(?:\w+\s+)(?!main)(?:\*)*([a-zA-Z_][a-zA-Z0-9_]*)", a)
     # this finds variable declarations and func decs
     for x in code:
         if(x not in special_cases):
