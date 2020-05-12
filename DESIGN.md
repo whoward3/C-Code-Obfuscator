@@ -55,7 +55,7 @@ void qasdfyuhgf(int zsedcvgyjm)
 ```
 We believe that renaming functions & variables is an easy way to obfuscate what you are doing. It takes away any discriptive names and gives it some random characters. 
 ## Whitespace Remover
-A function that goes through the code and removes all whitespaces where applicable. It removes spaces and newlines where appropriate so the code can still be run. It still keeps spacing in the `#` statements and in variable and function declarations.<>br
+A function that goes through the code and removes all whitespaces where applicable. It removes spaces and newlines where appropriate so the code can still be run. It still keeps spacing in the `#` statements and in variable and function declarations.<br>
 Chance or winston write a little more here to explain the rest of what is going on. <br>
 For example:<br>
 Pre-Whitespace Remover: <br>
@@ -69,7 +69,7 @@ int main()
 }
 
 ```
-Post-Variable Renamer: <br>
+Post-Whitspace remover: <br>
 ```
 #include <iostream> int main(){int number=5;return 0;}
 ```
@@ -92,7 +92,7 @@ void test_function(int a)
     return;
 }
 ```
-Post-Variable Renamer: <br>
+Pos using all 3 functions: <br>
 ```
 #include <iostream> int main(){int awdrgyjil = 5;qwertyuiop(awdrgyjil);return 0;}void qwertyuiop(int axdvgnjm){return;}
 ```
