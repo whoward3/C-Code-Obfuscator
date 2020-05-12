@@ -19,7 +19,6 @@ def variable_renamer(a):
     Function to rename all variables and fuctions when given a string a
     """
     var_map = {}
-    in_c_comment = False
     special_cases = {"typedef","unsigned"}
     splits = re.split('\"',a)
     code = re.findall(
@@ -57,6 +56,33 @@ def random_string(stringLength=8):
     letters = string.ascii_lowercase
     return ''.join(random.choice(letters) for i in range(stringLength))
 
+def whitespace_remover(a):
+    """
+    Function to remove all whitespace, except for after functions, variables, and imports
+    """
+    splits = re.split('\"',a)
+    code_string = "((\w+\s+)[a-zA-Z_][a-zA-Z0-9_]*|#.*)"
+    index = 0
+    a = ""
+    for s in splits:
+            if(index%2==0):                
+              s_spaceless = re.sub("[\s]", "", s)                          # Create a spaceless version of s
+              s_code = re.findall(code_string,s)                           # find all spaced code blocks in s
+
+              i = 0
+              for code in s_code:
+                old = re.sub("[\s]", "", code[0])
+                new = s_code[i][0]
+                s_spaceless = s_spaceless.replace(old,new)      # Replace the spaceless code blocks in s with their spaced equivilents                
+                i+=1
+
+              if(index >= 1):
+                a = a + "\"" + s_spaceless
+              else:
+                a = a + s_spaceless
+            index+=1
+    return a
+
 
 def main():
     """
@@ -80,7 +106,7 @@ def main():
             with open(os.path.join(cwd, filename)) as file_data:
                 file_string = file_data.read()
                 print("PASS\n")
-                file_string = variable_renamer(file_string)
+                file_string = whitespace_remover(file_string)
                 f = open("obfuscated_"+filename, "w+")
                 f.write(file_string)
                 print(file_string)
