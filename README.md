@@ -28,8 +28,10 @@ This python code is run in VS code, so if need be make sure python 3.7 is instal
 ## Sample Usages:
 ### Before and After of an obfuscated C/C++ file with the comments removed.
 ### Before and After of an obfuscated C/C++ file with functions and variables renamed to a random string.
-<img src = "https://raw.githubusercontent.com/whoward3/C-Code-Obfuscator/master/assets/Example1Photo1.png" width = "400">
-![Example 1 After Obfuscation](https://raw.githubusercontent.com/whoward3/C-Code-Obfuscator/master/assets/Example1Photo2.png)
+
+<img src = "https://raw.githubusercontent.com/whoward3/C-Code-Obfuscator/master/assets/Example1Photo1.png" width = "400"> <br>
+
+<img src = "https://raw.githubusercontent.com/whoward3/C-Code-Obfuscator/master/assets/Example1Photo2.png" width = "700"><br>
 <br>
 ### Before and After of an obfuscated C/C++ file with whitespaces removed, excluding after functions, variables, and imports.
 
