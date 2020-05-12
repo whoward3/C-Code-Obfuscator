@@ -26,12 +26,12 @@ You must use version control, include me,and:<br>
 This python code is run in VS code, so if need be make sure python 3.7 is installed. In when you run it, give it the C/C++ file you like to obfuscate and it will genereate a obfuscated version of the original file. This was done so the user wishing to obfuscate can retain their orignal code and have an obfuscated version. The user can then rename the cpp file to whatever they wish. 
 ***
 ## Sample Usages:
-
-### An example of an obfuscated c++ file with functions and variables renamed to a random string
+### An example of an obfuscated C/C++ file with the comments removed.
+### An example of an obfuscated C/C++ file with functions and variables renamed to a random string
 ![Example 1 Before Obfuscation](https://raw.githubusercontent.com/whoward3/C-Code-Obfuscator/master/assets/Example1Photo1.png)
 ![Example 1 After Obfuscation](https://raw.githubusercontent.com/whoward3/C-Code-Obfuscator/master/assets/Example1Photo2.png)
 <br>
-### An example of an obfuscated c++ file with whitespaces removed, excluding after functions, variables, and imports
+### An example of an obfuscated C/C++ file with whitespaces removed, excluding after functions, variables, and imports
 
-### An example of an obfuscated c++ file with both types of obfuscation used
+### An example of an obfuscated C/C++ file with all 3 types of obfuscation used
 
