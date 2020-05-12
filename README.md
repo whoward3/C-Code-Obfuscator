@@ -14,12 +14,12 @@ You have been asked to write a C or C++ code obfuscator - you may use any langua
 - [x] Attack Phase [50]:<br>
 		Using any and all of the tools you have seen in this class, dissect code that you have obfuscated using your software. Identify everything you can.
 
-- [ ] WriteUp/Submission [50]:<br>
+- [x] WriteUp/Submission [50]:<br>
 		Document your development and design choices, include the dissection and reverse engineering of a sample program. Address the strengths and weaknesses of your software and how you would iterate and make your program more effective at obfuscation.<br>
 You must use version control, include me,and:<br>
 	- [x] 5 pts  describe program:requirements, installation, usage - [see here](https://github.com/whoward3/C-Code-Obfuscator/blob/master/README.md)
 	- [x] 10 pts  documentation of design choices - [see here](https://github.com/whoward3/C-Code-Obfuscator/blob/master/DESIGN.md)
-	- [ ] 10 pts  documentation of your dissection and analysis - [see here](https://github.com/whoward3/C-Code-Obfuscator/blob/master/ANALYSIS.md)
+	- [x] 10 pts  documentation of your dissection and analysis - [see here](https://github.com/whoward3/C-Code-Obfuscator/blob/master/ANALYSIS.md)
 	- [x] 25 pts  reflection of the strengths, weaknesses, and future changes - [see here](https://github.com/whoward3/C-Code-Obfuscator/blob/master/NOP.md)
 ***
 ## Installation and Usage
