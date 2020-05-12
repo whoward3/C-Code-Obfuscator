@@ -11,7 +11,7 @@ You have been asked to write a C or C++ code obfuscator - you may use any langua
 	- [x] Part two of the develop phase [50]:<br>
 			Develop a mechanism that would obfuscate more complex data structures and possibly even logic structures. E.g. arrays, switch statements, etc.
 
-- [ ] Attack Phase [50]:<br>
+- [x] Attack Phase [50]:<br>
 		Using any and all of the tools you have seen in this class, dissect code that you have obfuscated using your software. Identify everything you can.
 
 - [ ] WriteUp/Submission [50]:<br>
