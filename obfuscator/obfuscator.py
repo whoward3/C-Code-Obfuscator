@@ -14,42 +14,60 @@ import string
 
 
 
-def variable_renamer(a):
+def variable_renamer(given_string):
     """
-    Function to rename all variables and fuctions when given a string a
+    Function to rename all variables and fuctions 
+    given_string is a string of C/C++ code
     """
-    var_map = {}
-    special_cases = {"typedef","unsigned"}
-    splits = re.split('\"',a)
-    code = re.findall(
-        "(?:\w+\s+)(?!main)(?:\*)*([a-zA-Z_][a-zA-Z0-9_]*)", a)
-    # this finds variable declarations and func decs
-    for x in code:
-        if(x not in special_cases):
-            if(x not in var_map):
-                var_map[x] = random_string(12)
-                # generate a random string and assign that to the function/var name
 
+    
+    # Variable declarations:
+    variable_dictionary = {}
+    special_cases = {"typedef","unsigned"}
     index = 0
-    a = ""
-    for s in splits:
+    new_string = ""
+
+    # Split the code to indicate when it enters/exits a string
+    split_code = re.split('\"',given_string)
+    
+    # REGEX to find all function and variable declarations ignoring main
+    filtered_code = re.findall(
+        "(?:\w+\s+)(?!main)(?:\*)*([a-zA-Z_][a-zA-Z0-9_]*)", given_string)
+
+    # For loop to add examples found from running a REGEX to a dictionary object
+    # Ignores special cases and repeats
+    # When a value is entered it is also assigned a random string of length 12
+    for found_example in filtered_code:
+        
+        if(found_example not in special_cases):
+            
+            if(found_example not in variable_dictionary):
+                
+                variable_dictionary[found_example] = random_string(12)
+
+    # For each even section in split code (odd indicates that it is in a string)
+    # replace all of the varaible and function names with what is defined in the dictionary
+    for section in split_code:
+            
             if(index%2==0):  
-                for z in var_map:
-                    # for each instance in the map replace it in the string with the randomly generated string                    
-                    re_string = r"\W{}\W".format(z)
+                
+                for entry in variable_dictionary:   
+                    
+                    # Used \W because we dont want to replace a variable if it is inside another word.                 
+                    re_string = r"\W{}\W".format(entry)
                     while True:
-                     m = re.search(re_string,s)
-                     if(not m):
-                         break
-                     start = m.start(0)
-                     end = m.end(0)
-                     s = s[:start+1] + var_map[z] + s[end-1:]
+                        first_found_entry = re.search(re_string, section)
+                        if(not first_found_entry):
+                            break
+                        start = first_found_entry.start(0)
+                        end = first_found_entry.end(0)
+                        section = section[:start+1] + variable_dictionary[entry] + section[end-1:]
             if(index >= 1):
-                a = a + "\"" + s  
+                new_string = new_string + "\"" + section  
             else:
-                a = a + s
+                new_string = new_string + section
             index+=1
-    return a
+    return new_string
 
 
 def random_string(stringLength=8):
@@ -106,7 +124,8 @@ def main():
             with open(os.path.join(cwd, filename)) as file_data:
                 file_string = file_data.read()
                 print("PASS\n")
-                file_string = whitespace_remover(file_string)
+                file_string = variable_renamer(file_string)
+                #file_string = whitespace_remover(file_string)
                 f = open("obfuscated_"+filename, "w+")
                 f.write(file_string)
                 print(file_string)
