@@ -4,15 +4,6 @@
 #include <iostream>
 using namespace std;
 
-//This is a dummy function
-int main()
-{
-    int number = 5;
-    string res = hello_function(number);
-    cout << res;
-    return 0; /*End of the function*/
-}
-
 string hello_function(int a)
 {
     while (a > 0)
@@ -29,4 +20,13 @@ string hello_function(int a)
     {
         return "Goodbye World";
     }
+}
+
+//This is a dummy function
+int main()
+{
+    int number = 5;
+    string res = hello_function(number);
+    cout << res;
+    return 0; /*End of the function*/
 }
