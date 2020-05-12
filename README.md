@@ -20,7 +20,7 @@ You must use version control, include me,and:<br>
 	- [x] 5 pts  describe program:requirements, installation, usage - [see here](https://github.com/whoward3/C-Code-Obfuscator/blob/master/README.md)
 	- [x] 10 pts  documentation of design choices - [see here](https://github.com/whoward3/C-Code-Obfuscator/blob/master/DESIGN.md)
 	- [ ] 10 pts  documentation of your dissection and analysis - [see here](https://github.com/whoward3/C-Code-Obfuscator/blob/master/ANALYSIS.md)
-	- [ ] 25 pts  reflection of the strengths, weaknesses, and future changes - [see here](https://github.com/whoward3/C-Code-Obfuscator/blob/master/NOP.md)
+	- [x] 25 pts  reflection of the strengths, weaknesses, and future changes - [see here](https://github.com/whoward3/C-Code-Obfuscator/blob/master/NOP.md)
 ***
 ## Installation and Usage
 This python code is run in VS code, so if need be make sure python 3.7 is installed. In when you run it, give it the C/C++ file you like to obfuscate and it will genereate a obfuscated version of the original file. This was done so the user wishing to obfuscate can retain their orignal code and have an obfuscated version. The user can then rename the cpp file to whatever they wish. 
