@@ -19,24 +19,32 @@ def variable_renamer(a):
     Function to rename all variables and fuctions when given a string a
     """
     var_map = {}
+    in_c_comment = False
+    special_cases = {"typedef","unsigned"}
     splits = re.split('\"',a)
     code = re.findall(
-        "(?:\w+\s+)(?!main)(?:\*)*([a-zA-Z_][a-zA-Z0-9_]*)", a)
+        "(?:\w+\s+)(?!main)([a-zA-Z_][a-zA-Z0-9_]*)", a)
     # this finds variable declarations and func decs
     for x in code:
-        if(x not in var_map):
-            var_map[x] = random_string(12)
-            # generate a random string and assign that to the function/var name
+        if(x not in special_cases):
+            if(x not in var_map):
+                var_map[x] = random_string(12)
+                # generate a random string and assign that to the function/var name
 
     index = 0
     a = ""
     for s in splits:
             if(index%2==0):  
                 for z in var_map:
-                    # for each instance in the map replace it in the string with the randomly generated string
-                    s = s.replace(z, var_map[z])
-            if(index != 0):
-                a = a + "\"" + s
+                    # for each instance in the map replace it in the string with the randomly generated string                    
+                    re_string = r"\W{}\W".format(z)
+                    tuples =  [(m.start(0), m.end(0)) for m in re.finditer(re_string, s)]
+                    for touple in tuples:
+                        strt = touple[0]
+                        end = touple[1]
+                        s = s[:strt+1] + var_map[z] + s[end-1:]
+            if(index < 1):
+                a = a + "\"" + s  
             else:
                 a = a + s
             index+=1
@@ -45,8 +53,18 @@ def variable_renamer(a):
 
 # inString = False
 
-# if start string True
+#fullmatch
+# int _cha_= 5
+#replace(z,varmap)
+# _cha_
 
+# _dsfhjksdfsj_ 
+
+
+
+
+# if start string True
+# ;a[ -> fjdskalfdjsakl
 
 # [name][name][bool]
 
