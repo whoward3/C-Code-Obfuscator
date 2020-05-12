@@ -14,11 +14,11 @@ string hello_function(int a)
 
     if (a <= 0)
     {
-        return "Hello World";
+        return "... Hello World!";
     }
     else
     {
-        return "Goodbye World";
+        return "... Goodbye World!";
     }
 }
 
