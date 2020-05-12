@@ -1,5 +1,7 @@
 # C-Code-Obfuscator
-Developed and run in Visual Studio Code, this is a basic python program to obfuscate c++ files. Obfuscates all variables and functions and removes all whitespaces except after functions, variables, and imports.<br>
+#### Developed By Sam "Alice" Blair, Winston Howard, Chance Sweetser
+## Summary
+Developed and run in Visual Studio Code, this is a basic python program to obfuscate C/C++ files. Obfuscates all variables and functions, removes comments, and removes all whitespaces except after functions, variables, and imports.<br>
 ***
 ## Requirements for Option 2
 You have been asked to write a C or C++ code obfuscator - you may use any language you want. Your job is to take existing C or C++ code and obfuscate all variable values and data structures. <br>
