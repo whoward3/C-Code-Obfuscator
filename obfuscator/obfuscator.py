@@ -106,7 +106,7 @@ def main():
             with open(os.path.join(cwd, filename)) as file_data:
                 file_string = file_data.read()
                 print("PASS\n")
-                file_string = whitespace_remover(file_string)
+                file_string = variable_renamer(file_string)
                 f = open("obfuscated_"+filename, "w+")
                 f.write(file_string)
                 print(file_string)
