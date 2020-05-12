@@ -15,7 +15,7 @@ You have been asked to write a C or C++ code obfuscator - you may use any langua
 - [ ] WriteUp/Submission [50]:<br>
 		Document your development and design choices, include the dissection and reverse engineering of a sample program. Address the strengths and weaknesses of your software and how you would iterate and make your program more effective at obfuscation.<br>
 You must use version control, include me,and:<br>
-- [ ] 5 pts  describe program:requirements, installation, usage [readme.md]
+- [x] 5 pts  describe program:requirements, installation, usage [readme.md]
 - [ ] 10 pts  documentation of design choices [design.md]
 - [ ] 10 pts  documentation of your dissection and analysis [analysis.md]
 - [ ] 25 pts  reflection of the strengths, weaknesses, and future changes [nop.md]
