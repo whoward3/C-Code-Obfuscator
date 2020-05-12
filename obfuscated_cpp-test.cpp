@@ -1,42 +1,43 @@
 /*
- Before jacbmozoomfr/jacbmozoomfr++ Code kkgyctsykptn
+ Before tmdpeefjukyt/tmdpeefjukyt++ Code hvlzfmucpgye
 
- REF: http://www.sourceformat.com/obfuscate-code-cpp.htm
+ REF: http:
  */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(int oiuvjrbhacyl, char **ektqcokefdkr)
+int main(int kfjygotnjogy, char **mtepbzirivpb)
 {
-  FILE *lyuxythzzujw;
-  typedef unsigned long jacbmozoomfr;
-  jacbmozoomfr emllqeffgfzn[8];
-  if (!(oiuvjrbhacyl == 7 && (lyuxythzzujw = fopen(1 [ektqcokefdkr], "rb"))))
+  
+  FILE *mhisjpiflhuy;
+  typedef unsigned long tmdpeefjukyt;
+  tmdpeefjukyt gdlzyhgapwgw[8];
+  if (!(kfjygotnjogy == 7 && (mhisjpiflhuy = fopen(1 [mtepbzirivpb], "rb"))))
     return 1;
-  for (7 [emllqeffgfzn] = 0; 7 [emllqeffgfzn] < 5; 7 [emllqeffgfzn]++)
-    emllqeffgfzn[7 [emllqeffgfzn]] = strtoul(ektqcokefdkr[2 + 7 [emllqeffgfzn]], 0, 16 - !7 [emllqeffgfzn] * 6);
-  5 [emllqeffgfzn] = 3 [emllqeffgfzn];
-  while ((6 [emllqeffgfzn] = getc(lyuxythzzujw)) != (jacbmozoomfr)-1)
+  for (7 [gdlzyhgapwgw] = 0; 7 [gdlzyhgapwgw] < 5; 7 [gdlzyhgapwgw]++)
+    gdlzyhgapwgw[7 [gdlzyhgapwgw]] = strtoul(mtepbzirivpb[2 + 7 [gdlzyhgapwgw]], 0, 16 - !7 [gdlzyhgapwgw] * 6);
+  5 [gdlzyhgapwgw] = 3 [gdlzyhgapwgw];
+  while ((6 [gdlzyhgapwgw] = getc(mhisjpiflhuy)) != (tmdpeefjukyt)-1)
   {
-    if (2 [emllqeffgfzn])
-      for (7 [emllqeffgfzn] = 0; 7 [emllqeffgfzn] < 4; 7 [emllqeffgfzn]++)
-        if (((6 [emllqeffgfzn] >> 7 [emllqeffgfzn]) ^ (6 [emllqeffgfzn] >> (7 - 7 [emllqeffgfzn]))) & 1)
-          6 [emllqeffgfzn] ^= (1 << 7 [emllqeffgfzn]) ^ (1 << (7 - 7 [emllqeffgfzn]));
-    5 [emllqeffgfzn] ^= 6 [emllqeffgfzn] << (0 [emllqeffgfzn] - 8);
-    for (7 [emllqeffgfzn] = 0; 7 [emllqeffgfzn] < 8; 7 [emllqeffgfzn]++)
-      if ((5 [emllqeffgfzn] >> (0 [emllqeffgfzn] - 1)) & 1)
-        5 [emllqeffgfzn] = (5 [emllqeffgfzn] << 1) ^ 1 [emllqeffgfzn];
+    if (2 [gdlzyhgapwgw])
+      for (7 [gdlzyhgapwgw] = 0; 7 [gdlzyhgapwgw] < 4; 7 [gdlzyhgapwgw]++)
+        if (((6 [gdlzyhgapwgw] >> 7 [gdlzyhgapwgw]) ^ (6 [gdlzyhgapwgw] >> (7 - 7 [gdlzyhgapwgw]))) & 1)
+          6 [gdlzyhgapwgw] ^= (1 << 7 [gdlzyhgapwgw]) ^ (1 << (7 - 7 [gdlzyhgapwgw]));
+    5 [gdlzyhgapwgw] ^= 6 [gdlzyhgapwgw] << (0 [gdlzyhgapwgw] - 8);
+    for (7 [gdlzyhgapwgw] = 0; 7 [gdlzyhgapwgw] < 8; 7 [gdlzyhgapwgw]++)
+      if ((5 [gdlzyhgapwgw] >> (0 [gdlzyhgapwgw] - 1)) & 1)
+        5 [gdlzyhgapwgw] = (5 [gdlzyhgapwgw] << 1) ^ 1 [gdlzyhgapwgw];
       else
-        5 [emllqeffgfzn] <<= 1;
+        5 [gdlzyhgapwgw] <<= 1;
   }
-  5 [emllqeffgfzn] &= ((((jacbmozoomfr)1 << (0 [emllqeffgfzn] - 1)) - 1) << 1) | 1;
-  if (2 [emllqeffgfzn])
-    for (7 [emllqeffgfzn] = 0; 7 [emllqeffgfzn] < (0 [emllqeffgfzn] >> 1); 7 [emllqeffgfzn]++)
-      if (((5 [emllqeffgfzn] >> 7 [emllqeffgfzn]) ^ (5 [emllqeffgfzn] >> (0 [emllqeffgfzn] - 1 - 7 [emllqeffgfzn]))) & 1)
-        5 [emllqeffgfzn] ^= ((jacbmozoomfr)1 << 7 [emllqeffgfzn]) ^ ((jacbmozoomfr)1 << (0 [emllqeffgfzn] - 1 - 7 [emllqeffgfzn]));
-  5 [emllqeffgfzn] ^= 4 [emllqeffgfzn];
-  fclose(lyuxythzzujw);
-  printf("%0*lX\n", (int)(0 [emllqeffgfzn] + 3) >> 2, 5 [emllqeffgfzn]);
+  5 [gdlzyhgapwgw] &= ((((tmdpeefjukyt)1 << (0 [gdlzyhgapwgw] - 1)) - 1) << 1) | 1;
+  if (2 [gdlzyhgapwgw])
+    for (7 [gdlzyhgapwgw] = 0; 7 [gdlzyhgapwgw] < (0 [gdlzyhgapwgw] >> 1); 7 [gdlzyhgapwgw]++)
+      if (((5 [gdlzyhgapwgw] >> 7 [gdlzyhgapwgw]) ^ (5 [gdlzyhgapwgw] >> (0 [gdlzyhgapwgw] - 1 - 7 [gdlzyhgapwgw]))) & 1)
+        5 [gdlzyhgapwgw] ^= ((tmdpeefjukyt)1 << 7 [gdlzyhgapwgw]) ^ ((tmdpeefjukyt)1 << (0 [gdlzyhgapwgw] - 1 - 7 [gdlzyhgapwgw]));
+  5 [gdlzyhgapwgw] ^= 4 [gdlzyhgapwgw];
+  fclose(mhisjpiflhuy);
+  printf("%0*lX\n", (int)(0 [gdlzyhgapwgw] + 3) >> 2, 5 [gdlzyhgapwgw]);
   return 0;
 }

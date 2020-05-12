@@ -19,8 +19,7 @@ def variable_renamer(given_string):
     Function to rename all variables and fuctions 
     given_string is a string of C/C++ code
     """
-
-    
+ 
     # Variable declarations:
     variable_dictionary = {}
     special_cases = {"typedef","unsigned"}
@@ -55,24 +54,42 @@ def variable_renamer(given_string):
                     
                     # Used \W because we dont want to replace a variable if it is inside another word.                 
                     re_string = r"\W{}\W".format(entry)
+
+                    # While loop to go through every entry and replace it
+                    # Breaks when it cannot find another instance
                     while True:
                         first_found_entry = re.search(re_string, section)
                         if(not first_found_entry):
                             break
+
+                        # Gets the iterator start and enndpoints of the searched re_string
+                        # Then replaces the the information inbetween with the dictionary value
                         start = first_found_entry.start(0)
                         end = first_found_entry.end(0)
                         section = section[:start+1] + variable_dictionary[entry] + section[end-1:]
+            
+            # Add the current section back to make the original string but with obfuscated names
+            # Accounts for adding a quote everytime except for the first scenario
             if(index >= 1):
                 new_string = new_string + "\"" + section  
             else:
                 new_string = new_string + section
+            
             index+=1
+    
+    # Return the obfuscated code
     return new_string
 
 
 def random_string(stringLength=8):
+    """
+    Function to generate a random string.
+    Can pass it an integer string length to make it that size else it will be 8
+    """
     letters = string.ascii_lowercase
     return ''.join(random.choice(letters) for i in range(stringLength))
+
+
 
 def whitespace_remover(a):
     """
@@ -102,6 +119,34 @@ def whitespace_remover(a):
     return a
 
 
+#
+#
+
+def comment_remover(given_string):
+    """
+    Function to (currently) remove C++ style comments 
+    given_string is a string of C/C++ code
+    """
+
+    #This does not take into account if a C++ style comment happens within a string
+    # i.e. "Normal String // With a C++ comment embedded inside"
+    cpp_filtered_code = re.findall(
+        r"\/\/.*", given_string)
+    for entry in cpp_filtered_code:
+        given_string = given_string.replace(entry, "")
+    
+    # This is a barebones start for C style block comments
+    # Current issue is it removes whitespace between function declarations
+
+    # c_filtered_code= re.findall(
+    #     r"//[^\n]*\n|/\*(.|[\r\n])*?\*/", given_string)
+    # for entry in c_filtered_code:
+    #     given_string = given_string.replace(entry, "")
+    
+    return given_string
+
+
+
 def main():
     """
     The main function to begin the obfuscation of c code files
@@ -124,6 +169,7 @@ def main():
             with open(os.path.join(cwd, filename)) as file_data:
                 file_string = file_data.read()
                 print("PASS\n")
+                file_string = comment_remover(file_string)
                 file_string = variable_renamer(file_string)
                 #file_string = whitespace_remover(file_string)
                 f = open("obfuscated_"+filename, "w+")

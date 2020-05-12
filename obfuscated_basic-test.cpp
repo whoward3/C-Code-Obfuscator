@@ -1,1 +1,1 @@
-int main() { int yrndkgbsrrhl = 4; }
+int main() { int ysmmwgtzcmet = 4; }

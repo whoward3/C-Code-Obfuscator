@@ -9,6 +9,7 @@
 
 int main(int a, char **A)
 {
+  // Test CPP coment
   FILE *B;
   typedef unsigned long C;
   C b[8];
@@ -26,7 +27,7 @@ int main(int a, char **A)
     5 [b] ^= 6 [b] << (0 [b] - 8);
     for (7 [b] = 0; 7 [b] < 8; 7 [b]++)
       if ((5 [b] >> (0 [b] - 1)) & 1)
-        5 [b] = (5 [b] << 1) ^ 1 [b];
+        5 [b] = (5 [b] << 1) ^ 1 [b];//Test CPP Comment
       else
         5 [b] <<= 1;
   }
