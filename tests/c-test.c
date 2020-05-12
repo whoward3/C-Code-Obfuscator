@@ -1,5 +1,3 @@
-#include <iostream>
-
 //This is a dummy function
 int main()
 {
