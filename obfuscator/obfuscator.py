@@ -96,10 +96,11 @@ def whitespace_remover(a):
     Function to remove all whitespace, except for after functions, variables, and imports
     """
     splits = re.split('\"',a)
-    code_string = "((\w+\s+)[a-zA-Z_][a-zA-Z0-9_]*|#.*)"
+    code_string = "((\w+\s+)[a-zA-Z_*][|a-zA-Z0-9_]*|#.*|return [a-zA-Z0-9_]*)"
     index = 0
     a = ""
     for s in splits:
+            # If its not the contents of a string, remove spaces of everything but code
             if(index%2==0):                
               s_spaceless = re.sub("[\s]", "", s)                          # Create a spaceless version of s
               s_code = re.findall(code_string,s)                           # find all spaced code blocks in s
@@ -110,17 +111,15 @@ def whitespace_remover(a):
                 new = s_code[i][0]
                 s_spaceless = s_spaceless.replace(old,new)      # Replace the spaceless code blocks in s with their spaced equivilents                
                 i+=1
+            else:
+              s_spaceless = s
 
-              if(index >= 1):
-                a = a + "\"" + s_spaceless
-              else:
-                a = a + s_spaceless
+            if(index >= 1):
+             a = a + "\"" + s_spaceless
+            else:
+             a = a + s_spaceless
             index+=1
     return a
-
-
-#
-#
 
 def comment_remover(given_string):
     """
@@ -144,8 +143,6 @@ def comment_remover(given_string):
         given_string = given_string.replace(entry, "")
     
     return given_string
-
-
 
 def main():
     """
@@ -171,7 +168,7 @@ def main():
                 print("PASS\n")
                 file_string = comment_remover(file_string)
                 file_string = variable_renamer(file_string)
-                #file_string = whitespace_remover(file_string)
+                file_string = whitespace_remover(file_string)
                 f = open("obfuscated_"+filename, "w+")
                 f.write(file_string)
                 print(file_string)
