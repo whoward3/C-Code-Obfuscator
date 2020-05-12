@@ -110,7 +110,9 @@ def whitespace_remover(a):
                new = code[0]
 
                if(code[0][0] == '#'):
-                 new = code[0] + " "                      # Adding an additional space for preprocesser commands                
+                 new = code[0] + "\n"                      # Adding a newline for preprocesser commands
+               elif("unsigned" in code[0]):
+                 new = code[0] + " "     
                s_spaceless = s_spaceless.replace(old,new) # Replace the spaceless code blocks in s with their spaced equivilents                
             else:
               s_spaceless = s
