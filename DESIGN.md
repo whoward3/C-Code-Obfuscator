@@ -55,8 +55,7 @@ void qasdfyuhgf(int zsedcvgyjm)
 ```
 We believe that renaming functions & variables is an easy way to obfuscate what you are doing. It takes away any discriptive names and gives it some random characters. 
 ## Whitespace Remover
-A function that goes through the code and removes all whitespaces where applicable. It removes spaces and newlines where appropriate so the code can still be run. It still keeps spacing in the `#` statements and in variable and function declarations.<br>
-Chance or winston write a little more here to explain the rest of what is going on. <br>
+A function that goes through the code and removes all whitespaces where applicable. It removes spaces and newlines where appropriate so the code can still be run. It still keeps spacing for preprocessor commands and special c commands such as variable and function declarations as well as logic statements.<br>
 For example:<br>
 Pre-Whitespace Remover: <br>
 ```
@@ -71,13 +70,14 @@ int main()
 ```
 Post-Whitspace remover: <br>
 ```
-#include <iostream> int main(){int number=5;return 0;}
+#include <iostream>
+int main(){int number=5;return 0;}
 ```
-We decided to do this to further reduce the readability of the code. It is much harder to read if statements, loops, etc. when all the white space is removed. This does have a small requiremtn that the coder does use `{}` that with loops and if statements. 
+We decided to do this to further reduce the readability of the code. It is much harder to read if statements, loops, etc. when all the white space is removed. We expect the coder to follow c-style guidelines to ensure this function removes whitespace appropriately and that the code is still executable after this function is complete. This includes the appropriate usage of `{}` with iterators and conditional statements.
 ## Using all 3 functions
 Pre using all 3 functions: <br>
 ```
-#include <iostream> 
+#include <iostream>
 
 //This is a dummy function
 int main()
@@ -87,12 +87,14 @@ int main()
     return 0; /*End of the function*/
 }
 
-void test_function(int a)
+int test_function(int a)
 {
-    return;
+    return a;
 }
 ```
 Pos using all 3 functions: <br>
 ```
-#include <iostream> int main(){int awdrgyjil = 5;qwertyuiop(awdrgyjil);return 0;}void qwertyuiop(int axdvgnjm){return;}
+#include <iostream>
+int main(){int czxwfasraudt=5;jxjnypvyotvo(czxwfasraudt);return 0;}int jxjnypvyotvo(int wyefsxvizawd){return wyefsxvizawd;}
 ```
+As you can see above when we combine the three functions we produce code that is very hard to read, much harder to trace, and yet still executable. The removal of comments and the removal of whitespaces make tracing the execution of the program much harder and the reading of logical statements difficult. The renaming of variables compounds this by making tracing functions, variables, and fields very difficult.
