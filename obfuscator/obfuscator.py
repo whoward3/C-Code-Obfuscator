@@ -102,15 +102,16 @@ def whitespace_remover(a):
     for s in splits:
             # If its not the contents of a string, remove spaces of everything but code
             if(index%2==0):                
-              s_spaceless = re.sub("[\s]", "", s)                          # Create a spaceless version of s
-              s_code = re.findall(code_string,s)                           # find all spaced code blocks in s
+              s_spaceless = re.sub("[\s]", "", s)          # Create a spaceless version of s
+              s_code = re.findall(code_string,s)           # find all spaced code blocks in s
 
-              i = 0
               for code in s_code:
-                old = re.sub("[\s]", "", code[0])
-                new = s_code[i][0]
-                s_spaceless = s_spaceless.replace(old,new)      # Replace the spaceless code blocks in s with their spaced equivilents                
-                i+=1
+               old = re.sub("[\s]", "", code[0])
+               new = code[0]
+
+               if(code[0][0] == '#'):
+                 new = code[0] + " "                      # Adding an additional space for preprocesser commands                
+               s_spaceless = s_spaceless.replace(old,new) # Replace the spaceless code blocks in s with their spaced equivilents                
             else:
               s_spaceless = s
 
