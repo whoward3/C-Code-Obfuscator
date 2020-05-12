@@ -9,7 +9,5 @@ Developed and run in Visual Studio Code, this is a basic python program to obfus
 <br>
 ### An example of an obfuscated c++ file with whitespaces removed, excluding after functions, variables, and imports
 
-<br>
 ### An example of an obfuscated c++ file with both types of obfuscation used
 
-<br>
