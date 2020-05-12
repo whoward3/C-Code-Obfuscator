@@ -5,7 +5,7 @@ Developed and run in Visual Studio Code, this is a basic python program to obfus
 
 ### An example of an obfuscated c++ file with functions and variables renamed to a random string
 ![Example 1 Before Obfuscation](https://raw.githubusercontent.com/whoward3/C-Code-Obfuscator/master/assets/Example1Photo1.png)
-![Example 1 After Obfuscation](https://raw.githubusercontent.com/whoward3/C-Code-Obfuscator/master/assets/Example1Photo1.png)
+![Example 1 After Obfuscation](https://raw.githubusercontent.com/whoward3/C-Code-Obfuscator/master/assets/Example1Photo2.png)
 <br>
 ### An example of an obfuscated c++ file with whitespaces removed, excluding after functions, variables, and imports
 

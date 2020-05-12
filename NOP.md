@@ -11,5 +11,5 @@
 The time complexity of both obfuscation functions each are O(n²), which can cause the runtime of our code to be too long when given lengthy c++ files to obfuscate.
 <br>
 ## Future Changes:
-- Shorten the time complexity of the code.
-- Include the ability of obfuscation on other high-level programming languages
+- Improve the time complexity
+- Include the ability to obfuscate on other high-level programming languages
