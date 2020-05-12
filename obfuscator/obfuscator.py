@@ -16,7 +16,7 @@ import string
 
 def variable_renamer(given_string):
     """
-    Function to rename all variables and fuctions 
+    Function to rename all variables and fuctions. 
     given_string is a string of C/C++ code
     """
  
@@ -136,12 +136,12 @@ def comment_remover(given_string):
         given_string = given_string.replace(entry, "")
     
     # This is a barebones start for C style block comments
-    # Current issue is it removes whitespace between function declarations
-
-    # c_filtered_code= re.findall(
-    #     r"//[^\n]*\n|/\*(.|[\r\n])*?\*/", given_string)
-    # for entry in c_filtered_code:
-    #     given_string = given_string.replace(entry, "")
+    # Current issue is it is only single line C style comments
+    # It also finds C style comments in strings
+    c_filtered_code= re.findall(
+        r"\/\*.*\*\/", given_string)
+    for entry in c_filtered_code:
+        given_string = given_string.replace(entry, "")
     
     return given_string
 

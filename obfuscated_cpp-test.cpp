@@ -1,5 +1,5 @@
 /*
- Before tmdpeefjukyt/tmdpeefjukyt++ Code hvlzfmucpgye
+ Before kjlifjhvjkwi/kjlifjhvjkwi++ Code vjzvwjgqabyo
 
  REF: http:
  */
@@ -7,37 +7,37 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(int kfjygotnjogy, char **mtepbzirivpb)
+int main(int zwjjblarlxar, char **zqlqyxdwflza)
 {
   
-  FILE *mhisjpiflhuy;
-  typedef unsigned long tmdpeefjukyt;
-  tmdpeefjukyt gdlzyhgapwgw[8];
-  if (!(kfjygotnjogy == 7 && (mhisjpiflhuy = fopen(1 [mtepbzirivpb], "rb"))))
+  FILE *uuslztfpdicf;
+  typedef unsigned long kjlifjhvjkwi;
+  kjlifjhvjkwi rfvuvgxrsrma[8];
+  if (!(zwjjblarlxar == 7 && (uuslztfpdicf = fopen(1 [zqlqyxdwflza], "rb"))))
     return 1;
-  for (7 [gdlzyhgapwgw] = 0; 7 [gdlzyhgapwgw] < 5; 7 [gdlzyhgapwgw]++)
-    gdlzyhgapwgw[7 [gdlzyhgapwgw]] = strtoul(mtepbzirivpb[2 + 7 [gdlzyhgapwgw]], 0, 16 - !7 [gdlzyhgapwgw] * 6);
-  5 [gdlzyhgapwgw] = 3 [gdlzyhgapwgw];
-  while ((6 [gdlzyhgapwgw] = getc(mhisjpiflhuy)) != (tmdpeefjukyt)-1)
+  for (7 [rfvuvgxrsrma] = 0; 7 [rfvuvgxrsrma] < 5; 7 [rfvuvgxrsrma]++)
+    rfvuvgxrsrma[7 [rfvuvgxrsrma]] = strtoul(zqlqyxdwflza[2 + 7 [rfvuvgxrsrma]], 0, 16 - !7 [rfvuvgxrsrma] * 6);
+  5 [rfvuvgxrsrma] = 3 [rfvuvgxrsrma];
+  while ((6 [rfvuvgxrsrma] = getc(uuslztfpdicf)) != (kjlifjhvjkwi)-1)
   {
-    if (2 [gdlzyhgapwgw])
-      for (7 [gdlzyhgapwgw] = 0; 7 [gdlzyhgapwgw] < 4; 7 [gdlzyhgapwgw]++)
-        if (((6 [gdlzyhgapwgw] >> 7 [gdlzyhgapwgw]) ^ (6 [gdlzyhgapwgw] >> (7 - 7 [gdlzyhgapwgw]))) & 1)
-          6 [gdlzyhgapwgw] ^= (1 << 7 [gdlzyhgapwgw]) ^ (1 << (7 - 7 [gdlzyhgapwgw]));
-    5 [gdlzyhgapwgw] ^= 6 [gdlzyhgapwgw] << (0 [gdlzyhgapwgw] - 8);
-    for (7 [gdlzyhgapwgw] = 0; 7 [gdlzyhgapwgw] < 8; 7 [gdlzyhgapwgw]++)
-      if ((5 [gdlzyhgapwgw] >> (0 [gdlzyhgapwgw] - 1)) & 1)
-        5 [gdlzyhgapwgw] = (5 [gdlzyhgapwgw] << 1) ^ 1 [gdlzyhgapwgw];
+    if (2 [rfvuvgxrsrma])
+      for (7 [rfvuvgxrsrma] = 0; 7 [rfvuvgxrsrma] < 4; 7 [rfvuvgxrsrma]++)
+        if (((6 [rfvuvgxrsrma] >> 7 [rfvuvgxrsrma]) ^ (6 [rfvuvgxrsrma] >> (7 - 7 [rfvuvgxrsrma]))) & 1)
+          6 [rfvuvgxrsrma] ^= (1 << 7 [rfvuvgxrsrma]) ^ (1 << (7 - 7 [rfvuvgxrsrma]));
+    5 [rfvuvgxrsrma] ^= 6 [rfvuvgxrsrma] << (0 [rfvuvgxrsrma] - 8);
+    for (7 [rfvuvgxrsrma] = 0; 7 [rfvuvgxrsrma] < 8; 7 [rfvuvgxrsrma]++)
+      if ((5 [rfvuvgxrsrma] >> (0 [rfvuvgxrsrma] - 1)) & 1)
+        5 [rfvuvgxrsrma] = (5 [rfvuvgxrsrma] << 1) ^ 1 [rfvuvgxrsrma];
       else
-        5 [gdlzyhgapwgw] <<= 1;
+        5 [rfvuvgxrsrma] <<= 1;
   }
-  5 [gdlzyhgapwgw] &= ((((tmdpeefjukyt)1 << (0 [gdlzyhgapwgw] - 1)) - 1) << 1) | 1;
-  if (2 [gdlzyhgapwgw])
-    for (7 [gdlzyhgapwgw] = 0; 7 [gdlzyhgapwgw] < (0 [gdlzyhgapwgw] >> 1); 7 [gdlzyhgapwgw]++)
-      if (((5 [gdlzyhgapwgw] >> 7 [gdlzyhgapwgw]) ^ (5 [gdlzyhgapwgw] >> (0 [gdlzyhgapwgw] - 1 - 7 [gdlzyhgapwgw]))) & 1)
-        5 [gdlzyhgapwgw] ^= ((tmdpeefjukyt)1 << 7 [gdlzyhgapwgw]) ^ ((tmdpeefjukyt)1 << (0 [gdlzyhgapwgw] - 1 - 7 [gdlzyhgapwgw]));
-  5 [gdlzyhgapwgw] ^= 4 [gdlzyhgapwgw];
-  fclose(mhisjpiflhuy);
-  printf("%0*lX\n", (int)(0 [gdlzyhgapwgw] + 3) >> 2, 5 [gdlzyhgapwgw]);
+  5 [rfvuvgxrsrma] &= ((((kjlifjhvjkwi)1 << (0 [rfvuvgxrsrma] - 1)) - 1) << 1) | 1;
+  if (2 [rfvuvgxrsrma])
+    for (7 [rfvuvgxrsrma] = 0; 7 [rfvuvgxrsrma] < (0 [rfvuvgxrsrma] >> 1); 7 [rfvuvgxrsrma]++)
+      if (((5 [rfvuvgxrsrma] >> 7 [rfvuvgxrsrma]) ^ (5 [rfvuvgxrsrma] >> (0 [rfvuvgxrsrma] - 1 - 7 [rfvuvgxrsrma]))) & 1)
+        5 [rfvuvgxrsrma] ^= ((kjlifjhvjkwi)1 << 7 [rfvuvgxrsrma]) ^ ((kjlifjhvjkwi)1 << (0 [rfvuvgxrsrma] - 1 - 7 [rfvuvgxrsrma]));
+  5 [rfvuvgxrsrma] ^= 4 [rfvuvgxrsrma];
+  fclose(uuslztfpdicf);
+  printf("%0*lX\n", (int)(0 [rfvuvgxrsrma] + 3) >> 2, 5 [rfvuvgxrsrma]);
   return 0;
 }

@@ -14,7 +14,7 @@ int main(int a, char **A)
   typedef unsigned long C;
   C b[8];
   if (!(a == 7 && (B = fopen(1 [A], "rb"))))
-    return 1;
+    return 1;/*Test C comment*/
   for (7 [b] = 0; 7 [b] < 5; 7 [b]++)
     b[7 [b]] = strtoul(A[2 + 7 [b]], 0, 16 - !7 [b] * 6);
   5 [b] = 3 [b];
